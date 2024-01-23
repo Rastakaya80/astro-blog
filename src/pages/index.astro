@@ -8,6 +8,15 @@ import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 import { HOMEPAGE_ARTICLE_LIMIT } from "../constants";
 
+// From other lesson to test:
+import { formatBlogPosts } from "../js/utils";
+const allBlogPosts = await Astro.glob("../content/blog/*.md");
+const formattedBlogPosts = (formatBlogPosts(allBlogPosts));
+// Get the most recent blog article
+const mostRecentPost = formattedBlogPosts[0];
+const remainingPosts = formattedBlogPosts.slice(1);
+// END other lesson
+
 // get blogs and sort by latest first
 const allBlogArticles: CollectionEntry<'blog'>[] = (await getCollection('blog'))
   .sort((a:CollectionEntry<'blog'>, b:CollectionEntry<'blog'>) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
