@@ -3,7 +3,7 @@ title: 'Soaring to New Heights: The World of Drones'
 pubDate: 2024-01-16
 author: 'Sarah Davis'
 image: 'image5.png'
-imgAlt: "A picture of a half opened laptop"
+imgAlt: 'A picture of a half opened laptop'
 tags: ['drones', 'tech', 'gadgets']
 slug: soaring-to-new-heights-the-world-of-drones
 draft: false

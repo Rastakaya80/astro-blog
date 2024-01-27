@@ -3,7 +3,7 @@ title: 'Elevate Your Mobile Experience with Samsung'
 pubDate: 2024-01-17
 author: 'Jane Smith'
 image: 'image4.png'
-imgAlt: "A picture of a Samsung phone"
+imgAlt: 'A picture of a Samsung phone'
 tags: ['samsung', 'smartphones', 'gadgets']
 slug: elevate-your-mobile-experience-with-samsung
 draft: false

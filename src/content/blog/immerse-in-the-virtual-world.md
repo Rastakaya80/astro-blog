@@ -3,7 +3,7 @@ title: 'Immerse in the Virtual World: VR Development'
 pubDate: 2024-01-18
 author: 'Michael Johnson'
 image: 'image3.png'
-imgAlt: "A picture of a tech gadget"
+imgAlt: 'A picture of a tech gadget'
 tags: ['vr', 'gadgets', 'tech']
 slug: immerse-in-the-virtual-world-vr-development
 draft: false

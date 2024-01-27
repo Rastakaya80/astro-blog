@@ -3,7 +3,7 @@ title: 'Unleash Creativity With These Cutting-Edge Tablets'
 pubDate: 2024-01-14
 author: 'Ralph Johnson'
 image: 'image7.png'
-imgAlt: "A picture of a woman using a tablet"
+imgAlt: 'A picture of a woman using a tablet'
 tags: ['tablets', 'gadgets']
 slug: unleash-creativity-with-these-cutting-edge-tablets
 draft: false

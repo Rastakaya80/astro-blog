@@ -3,7 +3,7 @@ title: 'The best laptops for developers in 2024'
 pubDate: 2024-01-20
 author: 'John Doe'
 image: 'image1.png'
-imgAlt: "A picture of a half opened laptop"
+imgAlt: 'A picture of a half opened laptop'
 tags: ['tech', 'hardware']
 slug: the-best-laptops-for-developers-in-2024
 draft: false
