@@ -1,16 +1,19 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import { Image } from "astro:assets";
-import about from "../images/about.jpg";
-import team1 from "../images/team1.png";
-import team2 from "../images/team2.png";
-import team3 from "../images/team3.png";
+import about from "../assets/about.jpg";
+import team1 from "../assets/team1.png";
+import team2 from "../assets/team2.png";
+import team3 from "../assets/team3.png";
 ---
 
 <MainLayout title="About This Blog">
   <h1 class="text-4xl font-bold mb-5">About TechPeople</h1>
   <div class="flex flex-col md:flex-row items-center justify-between gap-6">
     <div class="w-full md:w-1/2 mb-8 md:mb-0">
+      <!-- Astro will process this image as webp by default but you can assign a format like avif. 
+        AVIF is better than webP but not as supported yet.
+        Astro will also set width and height attributes to avoid CLS which Google will ding you for -->
       <Image
         src={about}
         alt="Tech People Team"
@@ -38,21 +41,33 @@ import team3 from "../images/team3.png";
     <h2 class="text-3xl font-extrabold text-gray-900 mb-8">Our Team</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
       <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-        <Image src={team1} alt="Team Member 1" class="w-full h-auto" />
+        <Image 
+          src={team1} 
+          alt="Team Member 1" 
+          class="w-full h-auto" 
+        />
         <div class="p-6">
           <h3 class="text-xl font-semibold text-gray-900 mb-2">John Doe</h3>
           <p class="text-gray-70">Founder & Editor-in-Chief</p>
         </div>
       </div>
       <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-        <Image src={team2} alt="Team Member 2" class="w-full h-auto" />
+        <Image 
+          src={team2} 
+          alt="Team Member 2" 
+          class="w-full h-auto" 
+        />
         <div class="p-6">
           <h3 class="text-xl font-semibold text-gray-900 mb-2">Paul Newman</h3>
           <p class="text-gray-70">Lead Writer</p>
         </div>
       </div>
       <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-        <Image src={team3} alt="Team Member 3" class="w-full h-auto" />
+        <Image 
+          src={team3} 
+          alt="Team Member 3" 
+          class="w-full h-auto" 
+        />
         <div class="p-6">
           <h3 class="text-xl font-semibold text-gray-900 mb-2">
             Johanna Johnson

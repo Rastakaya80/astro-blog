@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
-import logo from '../images/logo.png';
+import logo from '../assets/logo.png';
+import { BUSINESS_NAME } from "../constants";
 ---
 <nav class="bg-gray-900 text-white">
   <div
@@ -8,10 +9,9 @@ import logo from '../images/logo.png';
   >
     <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
       <Image src={logo} class="h-14" alt="TechPeople Logo" width={55} height={55} />
-      <span
-        class="self-center text-2xl font-semibold whitespace-nowrap"
-        ><span class="text-indigo-400">Tech</span>People</span
-      >
+      <span class="self-center text-2xl font-semibold whitespace-nowrap">
+        {BUSINESS_NAME}
+      </span>
     </a>
     <button
       data-collapse-toggle="navbar-default"

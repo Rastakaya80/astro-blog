@@ -3,9 +3,10 @@ import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION} from '../constants';
 
-const { title = "Articles & Tips To Keep You Better Informed"} = Astro.props;
+const { title = 'Articles & Tips To Keep You Better Informed'} = Astro.props;
 
 interface Props {
+  //  The '?' makes it optional. Run 'npx astro sync' to setup typescript
   title?: string;
 }
 ---
