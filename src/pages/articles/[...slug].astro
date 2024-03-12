@@ -3,6 +3,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
 import { getEntry } from 'astro:content';
 import { formatDate } from "../../utils";
 import Tags from "../../components/Tags.astro";
+import { Image } from "astro:assets";
 
 const { slug } = Astro.params;
 
@@ -17,6 +18,8 @@ if(entry === undefined) {
 }
 
 const { Content } = await entry.render();
+const filePath = "../../assets/blog/" + entry.data.image;
+const blogImage = await import(filePath);
 ---
 <MainLayout>
   <a href="/articles" class="inline-block bg-gray-100 p-2 mb-6 hover:bg-indigo-500 hover:text-white">Back To Articles</a>
@@ -24,7 +27,13 @@ const { Content } = await entry.render();
     <h1 class="text-4xl font-bold mb-2"> {entry.data.title}</h1>
     <h3 class="text-lg mb-2">Written by {entry.data.author} on {formatDate(entry.data.pubDate)}</h3>
     <Tags tags={entry.data.tags} />
-    <img src={'/images/' + entry.data.image} alt="Article Image" class="w-full h-auto rounded-xl my-6" />
+    <Image
+        src={blogImage.default}
+        alt={entry.data.imgAlt}
+        quality={"mid"}
+        format={"webp"}
+        class="w-full h-auto rounded-xl my-6"
+      />    
     <Content />
   </article>
 </MainLayout>

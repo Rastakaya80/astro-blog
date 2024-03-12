@@ -1,8 +1,12 @@
 ---
 import { formatDate } from "../utils";
+import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 
 const { article } = Astro.props;
+
+const filePath = "../assets/blog/" + article.data.image;
+const blogImage = await import(filePath);
 interface Props {
   article: CollectionEntry<'blog'>;
 }
@@ -12,11 +16,13 @@ interface Props {
 class="relative inline-block w-full sm:w-auto cursor-pointer rounded-2xl"
 >
 <a href={'/articles/' + article.slug}>
-  <img
-    src={'/images/' + article.data.image}
-    alt={article.data.imgAlt}
-    class="w-full h-auto rounded-2xl"
-  />
+  <Image
+        src={blogImage.default}
+        alt={article.data.imgAlt}
+        quality={"mid"}
+        format={"webp"}
+        class="w-full h-auto rounded-2xl"
+      />
 
   <div
     class="absolute inset-0 flex flex-col items-center justify-center bg-black opacity-60 hover:opacity-75 transition duration-300 ease-in-out text-white text-center rounded-2xl"

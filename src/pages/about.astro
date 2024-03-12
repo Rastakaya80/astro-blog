@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import { BUSINESS_NAME } from "../constants";
 import { Image } from "astro:assets";
 import about from "../assets/about.jpg";
 import team1 from "../assets/team1.png";
@@ -8,7 +9,7 @@ import team3 from "../assets/team3.png";
 ---
 
 <MainLayout title="About This Blog">
-  <h1 class="text-4xl font-bold mb-5">About TechPeople</h1>
+  <h1 class="text-4xl font-bold mb-5">About {BUSINESS_NAME}</h1>
   <div class="flex flex-col md:flex-row items-center justify-between gap-6">
     <div class="w-full md:w-1/2 mb-8 md:mb-0">
       <!-- Astro will process this image as webp by default but you can assign a format like avif. 
@@ -17,6 +18,10 @@ import team3 from "../assets/team3.png";
       <Image
         src={about}
         alt="Tech People Team"
+        width={596}
+        height={397}
+        quality={"mid"}
+        format={"webp"}
         class="w-full h-auto rounded-lg shadow-lg"
       />
     </div>
@@ -43,6 +48,10 @@ import team3 from "../assets/team3.png";
       <div class="bg-white shadow-lg rounded-lg overflow-hidden">
         <Image 
           src={team1} 
+          width={384}
+          height={256}
+          quality={"mid"}
+          format={"webp"}
           alt="Team Member 1" 
           class="w-full h-auto" 
         />
@@ -55,6 +64,10 @@ import team3 from "../assets/team3.png";
         <Image 
           src={team2} 
           alt="Team Member 2" 
+          quality={"mid"}
+          format={"webp"}
+          width={384}
+          height={256}
           class="w-full h-auto" 
         />
         <div class="p-6">
@@ -65,6 +78,10 @@ import team3 from "../assets/team3.png";
       <div class="bg-white shadow-lg rounded-lg overflow-hidden">
         <Image 
           src={team3} 
+          quality={"mid"}
+          format={"webp"}
+          width={384}
+          height={256}
           alt="Team Member 3" 
           class="w-full h-auto" 
         />
